@@ -11,7 +11,4 @@ public class FilterFunctionDemo {
         list.stream().filter(t->t.startsWith("S")).forEach(t -> System.out.println(t));
 
     }
-
-
-
 }
