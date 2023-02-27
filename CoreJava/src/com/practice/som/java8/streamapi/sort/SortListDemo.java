@@ -32,13 +32,14 @@ public class SortListDemo {
 		 * list.stream().sorted(Comparator.reverseOrder()).forEach(t->System.out.println
 		 * (t)); // Sort in descending order using Stream API
 		 */
-		
-		List<Employee> emp =  EmployeeDAO.getDetails();
-		
-		//Traditional Comparator way by creating a separate class - 1
-		//Collections.sort(emp, new MyComparator());
-		
-		//Traditional Comparator way by directly creating an object of the interface - 2
+
+		List<Employee> emp = EmployeeDAO.getDetails();
+
+		// Traditional Comparator way by creating a separate class - 1
+		// Collections.sort(emp, new MyComparator());
+
+		// Traditional Comparator way by directly creating an object of the interface -
+		// 2
 		/*
 		 * Collections.sort(emp, new Comparator<Employee>() {
 		 * 
@@ -46,23 +47,26 @@ public class SortListDemo {
 		 * 
 		 * return o1.getSalary() - o2.getSalary(); } });
 		 */
-		
-		//Using Lambda Expression- 3
+
+		// Using Lambda Expression- 3
 		/*
-		 * Collections.sort(emp, (o1,o2)-> o1.getSalary() - o2.getSalary());    //Ascending
+		 * Collections.sort(emp, (o1,o2)-> o1.getSalary() - o2.getSalary()); //Ascending
 		 * 
 		 * System.out.println(emp);
 		 */
-		
-		//Using Stream API functions- 4
-		//emp.stream().sorted((o1,o2)-> o2.getSalary() - o1.getSalary()).forEach(t->System.out.println(t)); 	//Ascending
-		
-		//Using Stream API functions (Simpler way) - 5
-		//emp.stream().sorted(Comparator.comparing(e->e.getSalary())).forEach(System.out::println); 		//Ascending by Default
-		
-		//Using Stream API functions without Lambda Functions (Simpler way) - 6
-		emp.stream().sorted(Comparator.comparing(Employee::getSalary)).forEach(System.out::println); 		//Ascending by Default
-		
+
+		// Using Stream API functions- 4
+		// emp.stream().sorted((o1,o2)-> o2.getSalary() -
+		// o1.getSalary()).forEach(t->System.out.println(t)); //Ascending
+
+		// Using Stream API functions (Simpler way) - 5
+		// emp.stream().sorted(Comparator.comparing(e->e.getSalary())).forEach(System.out::println);
+		// //Ascending by Default
+
+		// Using Stream API functions without Lambda Functions (Simpler way) - 6
+		emp.stream().sorted(Comparator.comparing(Employee::getSalary)).forEach(System.out::println); // Ascending by
+																										// Default
+
 	}
 
 }
