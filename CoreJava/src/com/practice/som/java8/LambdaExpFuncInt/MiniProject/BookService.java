@@ -13,8 +13,11 @@ public class BookService {
         //Not using Lambda Function
         //Collections.sort(books,new MyComparator());
 
-        //Using Lambda Function
+        //Using Lambda Function to sort w.r.t a String
         Collections.sort(books, (o1,o2) -> o1.getName().compareTo(o2.getName()));
+        
+        //Using Lambda Function to sort w.r.t an integer
+        //Collections.sort(books, (o1,o2)->Integer.compare(o1.getNo(), o2.getNo()));
 
         return books;
     }
