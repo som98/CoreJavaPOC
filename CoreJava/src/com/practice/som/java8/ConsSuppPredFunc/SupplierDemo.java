@@ -1,4 +1,4 @@
-package com.practice.som.java8.ConsSuppPred;
+package com.practice.som.java8.ConsSuppPredFunc;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +15,7 @@ public class SupplierDemo{
 
     public static void main(String[] args) {
         Supplier<String> sup = () -> "Hi Som";
-        //System.out.println(sup.get());
+        System.out.println(sup.get());
 
         List<String> list= Arrays.asList("Hi","Bye","Good","Welcome","Saranghae");
         System.out.println(list.stream().findAny().orElseGet(sup));

@@ -1,4 +1,4 @@
-package com.practice.som.java8.ConsSuppPred;
+package com.practice.som.java8.ConsSuppPredFunc;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +12,7 @@ public class PredicateAnotherDemo {
 	      
 	      eval(list, n-> n%2 == 0 );
 	      
-	      //Either use line 15 or line 14,20-26
+	      //Either use line 15 or line 13,20-26
 	      //list.stream().filter(n -> n%2==0).forEach(System.out::println);
 
 	   }
