@@ -1,20 +1,29 @@
 package com.practice.som.java8.reduceFunction;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ReduceFunctioninStream {
 	
 	public static void main(String[] args) {
 		
-		List<Integer> list = List.of(1,4,6,9,23,12,56,89);
+		List<Integer> list = List.of(4,6,89,9,23,1,12,56);
 		
 		int sum = addListFunctional(list);
 		
 		System.out.println(sum);
+		
+		findMax(list);
+		
+		findMin(list);
+		
+		/*
+		 * int min = Collections.min(list); System.out.println(min);
+		 */
 	}
 	
-	//w.r.t. to code of line - 25
+	//w.r.t. to code of line - 34
 	/*
 	public static int summation(int aggregrate, int nextnumber) {
 		return aggregrate+nextnumber;
@@ -33,7 +42,29 @@ public class ReduceFunctioninStream {
 		//return list.stream().reduce(0, Integer::sum);
 	}
 
+	private static void findMax(List<Integer> list) {
+		
+		int max= list.stream().reduce(Integer.MIN_VALUE, (a,b)-> a>b? a:b);
+		System.out.println("Max Value: "+max);
+		
+		//OR - by using Method reference
+		/*int max1 = list.stream().reduce(Integer.MIN_VALUE, Integer::max);
+		System.out.println("Max Value: "+max1);
+	    */
+	}
 	
+
+	private static void findMin(List<Integer> list) {
+		int min= list.stream().reduce(Integer.MAX_VALUE, (a,b)-> a>b? b:a);
+		System.out.println("Min Value: "+min);
+		
+		//OR - by using Method reference
+		/*int min1 = list.stream().reduce(Integer.MAX_VALUE, Integer::min);
+		System.out.println("Max Value: "+min1);
+		*/
+		
+		
+	}
 	
 
 }
