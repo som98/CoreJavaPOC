@@ -1,0 +1,27 @@
+------------------------
+	SimpleDateFormat
+------------------------
+Instantiation of SimpleDateFormat is created by new. Not thread safe. 
+Therefore, in the case of multi-thread processing, it is necessary to create an instance each time immediately before using it.
+
+Processing to convert from Date to String. Pass java.util.Date type as an argument to format method.
+
+Example->
+
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
+Date date = new Date();
+System.out.println(sdf.format(date));
+
+-------------------------
+	DateTimeFormatter
+-------------------------
+DateTimeFormatter is instantiated by the ofPattern method. Thread safe. 
+Unlike SimpleDateFormat, there is no need to create an instance each time you use it during multithreaded processing.
+
+Pass TemporalAccessor as an argument to the format method.
+
+Example->
+
+DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss.SSS");
+LocalDateTime localDateTimenow = LocalDateTime.now();
+System.out.println(dtf.format(localDateTimenow));
