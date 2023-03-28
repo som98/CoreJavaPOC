@@ -1,4 +1,4 @@
-package com.practice.som.java8.skiplimitFunc;
+package com.practice.som.java8.Files;
 
 import java.io.IOException;
 import java.nio.file.Files;

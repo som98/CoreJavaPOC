@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import com.practice.som.java8.mapVsflatMap.Customer;
-import com.practice.som.java8.mapVsflatMap.CustomerDAO;
+import com.practice.som.java8.flatMapVsmap.Customer;
+import com.practice.som.java8.flatMapVsmap.CustomerDAO;
 
 public class OptionalExample {
 

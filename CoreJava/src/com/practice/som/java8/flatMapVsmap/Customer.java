@@ -1,4 +1,4 @@
-package com.practice.som.java8.mapVsflatMap;
+package com.practice.som.java8.flatMapVsmap;
 
 import java.util.List;
 
